@@ -1,0 +1,31 @@
+<%- include("./partials/header.ejs")%> <!--Dando um include do header nesta pagina-->
+
+    <body>
+        <%- include("./partials/navbar.ejs")%> <!--Incluindo o navbar-->
+            <div class="container">
+                <div class="card" id="formulario-pergunta">
+                    <div class="card-header">
+                        <h1>Realizar pergunta</h1>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <form method="POST" action="salvarpergunta">
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">Titulo</label>
+                                <input type="text" class="form-control" placeholder="Titulo" name="titulo" idd="titulo"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <textarea name="descricao" id="descricao" class="form-control"
+                                    placeholder="Descreva sua pergunta aqui" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" value="Perguntar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+    </body>
+    <%- include("./partials/footer.ejs")%> <!--Dando um includer do footer nesta pagina-->
